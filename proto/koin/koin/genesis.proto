@@ -1,0 +1,12 @@
+syntax = "proto3";
+package koin.koin;
+
+import "gogoproto/gogo.proto";
+import "koin/koin/params.proto";
+
+option go_package = "koin/x/koin/types";
+
+// GenesisState defines the koin module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+}
